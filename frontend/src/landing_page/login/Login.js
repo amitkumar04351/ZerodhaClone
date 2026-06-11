@@ -25,7 +25,7 @@ function Login() {
       alert("Login Successful");
 
       // Better than window.location
-      window.location.href = "http://localhost:3001";
+      window.location.href = "https://your-dashboard.vercel.app";
 
     } catch (err) {
       console.log(err);
