@@ -34,9 +34,7 @@ function Signup() {
     err.response?.data?.error ||
     "Signup Failed"
   );
-}
-
-    } finally {
+   } finally {
       setLoading(false);
     }
   };
