@@ -14,8 +14,9 @@ const PORT = process.env.PORT || 3002;
 const uri = process.env.MONGO_URL;
 
 const app = express();
-app.get("/", (req, res) => {
-  res.send("Zerodha Clone Backend is Running ");
+app.get("/holdings", async (req, res) => {
+  const holdings = await Holding.find();
+  res.json(holdings);
 });
 
 app.use(cors({
