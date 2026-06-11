@@ -18,12 +18,7 @@ app.get("/", (req, res) => {
   res.send("Zerodha Clone Backend is Running ");
 });
 
-app.use(cors({
-  origin: [
-    "https://your-landing.vercel.app",
-    "https://your-dashboard.vercel.app"
-  ]
-}));
+app.use(cors());
 app.use(bodyParser.json());
 
 // app.get("/addHoldings", async (req, res) => {
