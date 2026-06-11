@@ -190,12 +190,12 @@ app.use(bodyParser.json());
 //   res.send("Done!");
 // });
 
-app.post("/allHoldings", async (req, res) => {
+app.get("/allHoldings", async (req, res) => {
   let allHoldings = await HoldingsModel.find({});
   res.json(allHoldings);
 });
 
-app.post("/allPositions", async (req, res) => {
+app.get("/allPositions", async (req, res) => {
   let allPositions = await PositionsModel.find({});
   res.json(allPositions);
 });
