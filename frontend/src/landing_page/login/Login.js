@@ -15,10 +15,13 @@ function Login() {
     try {
       setLoading(true);
 
-      const res = await axios.post("https://zerodhaclone-5su0.onrender.com/login"), {
-        email,
-        password,
-      });
+      const res = await axios.post(
+  "https://zerodhaclone-5su0.onrender.com/login",
+  {
+    email,
+    password,
+  }
+);
 
       localStorage.setItem("token", res.data.token);
 
