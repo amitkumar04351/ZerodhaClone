@@ -19,15 +19,22 @@ function Signup() {
     try {
       setLoading(true);
 
-      await axios.post("http://localhost:3002/signup", user);
+      await axios.post("https://zerodhaclone-5su0.onrender.com/signup", user);
 
       alert("Signup Successful");
 
       navigate("/login");
 
     } catch (err) {
-      console.log(err);
-      alert("Signup Failed");
+  console.log("Signup Error:", err);
+  console.log("Response:", err.response?.data);
+
+  alert(
+    err.response?.data?.message ||
+    err.response?.data?.error ||
+    "Signup Failed"
+  );
+}
 
     } finally {
       setLoading(false);
