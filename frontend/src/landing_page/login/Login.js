@@ -15,7 +15,7 @@ function Login() {
     try {
       setLoading(true);
 
-      const res = await axios.post("http://localhost:3002/login", {
+      const res = await axios.post("https://your-backend.onrender.com/login"), {
         email,
         password,
       });
