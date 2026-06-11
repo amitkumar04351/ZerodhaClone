@@ -15,7 +15,12 @@ const uri = process.env.MONGO_URL;
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    "https://your-landing.vercel.app",
+    "https://your-dashboard.vercel.app"
+  ]
+}));
 app.use(bodyParser.json());
 
 // app.get("/addHoldings", async (req, res) => {
