@@ -28,7 +28,7 @@ function Login() {
       alert("Login Successful");
 
       // Better than window.location
-      window.location.href = "https://zerodhaclone-2-20n1.onrender.com/";
+      window.location.href = "https://zerodhaclone-5su0.onrender.com/signup";
 
     } catch (err) {
       console.log(err);
